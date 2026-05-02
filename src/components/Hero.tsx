@@ -77,7 +77,7 @@ const Hero = () => {
                 className="w-48 h-48 md:w-64 md:h-64 neo-border neo-shadow-primary overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500"
               >
                 <img
-                  src="/professional_developer_photo_1777708314983.png"
+                  src="/1.jpeg"
                   alt="Kazi Md Osman Goni"
                   className="w-full h-full object-cover"
                 />
