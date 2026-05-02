@@ -55,8 +55,9 @@ const Hero = () => {
         <div className="absolute -top-20 -left-10 opacity-10 font-bebas text-[200px] leading-none pointer-events-none select-none">
           SYSTEM_ERROR
         </div>
-        <div className="flex flex-col md:flex-row items-start gap-gutter">
-          <div className="flex-1">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative z-10">
+          {/* Left Side: Content */}
+          <div className="flex-1 order-2 lg:order-1">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -65,60 +66,85 @@ const Hero = () => {
             >
               KAZI MD OSMAN GONI 👋 Fullstack Developer
             </motion.div>
-            <h1 ref={titleRef} className="font-bebas text-[10vw] md:text-[12rem] leading-[0.8] text-white mix-blend-difference mb-8 tracking-tighter">
+            
+            <h1 ref={titleRef} className="font-bebas text-[12vw] md:text-[10rem] leading-[0.8] text-white mix-blend-difference mb-12 tracking-tighter">
               BUILDING<br />
               <span className="text-primary-container">THE FUTURE</span>
             </h1>
-            <div className="flex flex-col md:flex-row gap-12 items-center mb-12">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="w-48 h-48 md:w-64 md:h-64 neo-border neo-shadow-primary overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500"
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1.2 }}
+              className="text-xl text-on-surface-variant max-w-2xl mb-12 border-l-4 border-primary-container pl-8 leading-relaxed"
+            >
+              RADICAL ARCHITECTURES FOR A COLLAPSING DIGITAL LANDSCAPE. I BUILD TOOLS THAT BREAK THE MOLD AND INTERFACES THAT SPEAK TRUTH TO POWER.
+            </motion.p>
+
+            <div className="flex flex-wrap gap-8 items-center mb-16">
+              <motion.a
+                href="/resume.pdf"
+                download
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-4 bg-tertiary-container text-black px-10 py-5 font-bebas text-3xl neo-border neo-shadow hover:bg-white transition-all"
               >
-                <img
-                  src="/1.jpeg"
-                  alt="Kazi Md Osman Goni"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-              <div className="flex-1">
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 1.2 }}
-                  className="text-lg text-on-surface-variant max-w-xl mb-8 border-l-4 border-primary-container pl-6"
+                <span className="material-symbols-outlined text-3xl">download</span>
+                DOWNLOAD_RESUME
+              </motion.a>
+              
+              <div className="flex gap-4">
+                <motion.button
+                  whileHover={{ scale: 1.1, color: "#38bdf8" }}
+                  className="w-14 h-14 rounded-full border-2 border-white/10 flex items-center justify-center text-white/50 hover:border-sky-400"
                 >
-                  RADICAL ARCHITECTURES FOR A COLLAPSING DIGITAL LANDSCAPE. I BUILD TOOLS THAT BREAK THE MOLD AND INTERFACES THAT SPEAK TRUTH TO POWER.
-                </motion.p>
-                <motion.a
-                  href="/resume.pdf"
-                  download
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-4 bg-tertiary-container text-black px-8 py-4 font-bebas text-2xl neo-border neo-shadow hover:bg-white transition-all"
+                  <span className="material-symbols-outlined text-2xl">share</span>
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.1, color: "#38bdf8" }}
+                  className="w-14 h-14 rounded-full border-2 border-white/10 flex items-center justify-center text-white/50 hover:border-sky-400"
                 >
-                  <span className="material-symbols-outlined">download</span>
-                  DOWNLOAD_RESUME
-                </motion.a>
+                  <span className="material-symbols-outlined text-2xl">mail</span>
+                </motion.button>
               </div>
             </div>
-            <div className="flex flex-wrap gap-element-gap">
+
+            <div className="flex flex-wrap gap-6">
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255,255,255,0.3)" }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-black px-12 py-6 text-2xl font-bebas neo-border neo-shadow transition-all"
+                className="bg-white text-black px-10 py-4 text-2xl font-bebas neo-border neo-shadow transition-all"
               >
                 VIEW THE VOID
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(56,189,248,0.5)" }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-black text-white px-12 py-6 text-2xl font-bebas neo-border neo-shadow-primary transition-all"
+                className="bg-black text-white px-10 py-4 text-2xl font-bebas neo-border neo-shadow-primary transition-all"
               >
                 START REVOLUTION
               </motion.button>
             </div>
+          </div>
+
+          {/* Right Side: Photo */}
+          <div className="w-full lg:w-[450px] order-1 lg:order-2">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="relative aspect-square w-full neo-border neo-shadow-primary overflow-hidden grayscale hover:grayscale-0 transition-all duration-700"
+            >
+              <img
+                src="/1.jpeg"
+                alt="Kazi Md Osman Goni"
+                className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+              <div className="absolute bottom-6 left-6 font-bebas text-2xl text-white tracking-widest bg-black/80 px-4 py-1 backdrop-blur-sm">
+                ID_VERIFIED: 0x2A9F
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
