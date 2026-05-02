@@ -98,7 +98,7 @@ const Contact = () => {
             </div>
             <div>
               <div className="font-bebas text-xl text-primary-container">EMAIL_NODE</div>
-              <div className="text-white font-bold">osman.goni@void.com</div>
+              <div className="text-white font-bold">kaziosman873@gmail.com</div>
             </div>
           </div>
           <div className="flex items-center gap-6 group">
@@ -107,7 +107,7 @@ const Contact = () => {
             </div>
             <div>
               <div className="font-bebas text-xl text-primary-container">VOICE_CHANNEL</div>
-              <div className="text-white font-bold">+880 1234-567890</div>
+              <div className="text-white font-bold">+880 1871-211687</div>
             </div>
           </div>
           <div className="flex items-center gap-6 group">
@@ -116,7 +116,7 @@ const Contact = () => {
             </div>
             <div>
               <div className="font-bebas text-xl text-primary-container">WHATSAPP_LINK</div>
-              <div className="text-white font-bold">+880 1234-567890</div>
+              <div className="text-white font-bold">+880 1871-211687</div>
             </div>
           </div>
         </div>

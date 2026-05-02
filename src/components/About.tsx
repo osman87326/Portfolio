@@ -23,8 +23,7 @@ const About = () => {
                 radical and true to the user's needs.
               </p>
               <p className="border-t-2 border-primary-container pt-6">
-                Outside of the digital void, you'll find me exploring the latest in sports technology, 
-                experimenting with digital painting, or diving into sci-fi literature. These interests 
+                Outside of the digital void, you'll find me **Cycling** through the city or **Traveling** to explore new terrains. These interests 
                 fuel my creativity and help me bring a unique perspective to every line of code I write.
               </p>
             </div>
@@ -34,9 +33,9 @@ const About = () => {
               <h3 className="font-bebas text-3xl text-primary-container mb-4">PERSONALITY_PROTOCOL</h3>
               <ul className="space-y-2 font-inter text-sm tracking-widest uppercase">
                 <li>• RADICAL PROBLEM SOLVER</li>
-                <li>• TECH ENTHUSIAST</li>
-                <li>• CONTINUOUS LEARNER</li>
-                <li>• DESIGN THINKER</li>
+                <li>• CADET UNDER OFFICER</li>
+                <li>• CYCLIST & TRAVELER</li>
+                <li>• COMPETITIVE PROGRAMMER</li>
               </ul>
             </div>
             <div className="p-8 bg-primary-container text-black neo-border neo-shadow">
@@ -50,6 +49,9 @@ const About = () => {
                 </a>
                 <a href="https://twitter.com" className="hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-4xl">share</span>
+                </a>
+                <a href="https://facebook.com" className="hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-4xl">public</span>
                 </a>
               </div>
             </div>
