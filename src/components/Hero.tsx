@@ -141,9 +141,6 @@ const Hero = () => {
                 className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
-              <div className="absolute bottom-6 left-6 font-bebas text-2xl text-white tracking-widest bg-black/80 px-4 py-1 backdrop-blur-sm">
-                ID_VERIFIED: 0x2A9F
-              </div>
             </motion.div>
           </div>
         </div>
