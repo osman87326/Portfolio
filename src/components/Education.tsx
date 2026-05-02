@@ -39,9 +39,9 @@ const Education = () => {
           <div className="space-y-0">
             <TimelineItem 
               year="2024 - PRESENT"
-              title="JUNIOR FRONTEND DEVELOPER"
+              title="JUNIOR FULLSTACK DEVELOPER"
               subtitle="TechNova Solutions"
-              description="Building responsive and highly animated user interfaces using Next.js and GSAP. Collaborating with senior architects to implement scalable design systems."
+              description="Developing full-cycle web applications, from high-performance frontends with Next.js to robust backend systems. Architecting scalable design systems and integrated database solutions."
             />
             <TimelineItem 
               year="2023 - 2024"

@@ -14,8 +14,8 @@ const About = () => {
               <p>
                 My programming journey began with a curiosity about how the digital world functions. 
                 What started as a simple "Hello World" evolved into a deep passion for crafting high-performance, 
-                visually stunning web applications. I specialize in Frontend Development, but I keep my 
-                eyes on the entire stack to ensure seamless user experiences.
+                visually stunning web applications. I specialize in Fullstack Development, ensuring that 
+                robust backend architectures meet seamless, high-end user interfaces.
               </p>
               <p>
                 I enjoy the challenge of solving complex architectural problems and breaking the mold 

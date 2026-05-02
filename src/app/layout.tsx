@@ -16,8 +16,8 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "DESIGNER.VOID | Technical Architect",
-  description: "Radical architectures for a collapsing digital landscape.",
+  title: "KAZI MD OSMAN GONI | Fullstack Developer",
+  description: "Crafting high-performance fullstack applications with radical architectures.",
 };
 
 export default function RootLayout({
