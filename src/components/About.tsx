@@ -15,7 +15,7 @@ const About = () => {
             <div className="space-y-4">
               <h2 className="font-bebas text-8xl lg:text-9xl text-white tracking-tighter uppercase leading-none">
                 WHO_IS<br />
-                <span className="text-primary-container">OSMAN?</span>
+                <span className="text-primary-container">KAZI_MD_OSMAN_GONI?</span>
               </h2>
               <div className="w-24 h-2 bg-primary-container" />
             </div>
@@ -88,9 +88,9 @@ const About = () => {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { icon: 'code', label: 'GITHUB', href: 'https://github.com/osman87326' },
-                  { icon: 'work', label: 'LINKEDIN', href: 'https://linkedin.com/in/osman873' },
-                  { icon: 'share', label: 'TWITTER', href: 'https://twitter.com' },
-                  { icon: 'public', label: 'FACEBOOK', href: 'https://facebook.com' },
+                  { icon: 'work', label: 'LINKEDIN', href: 'https://www.linkedin.com/in/kazimdosmangoni/' },
+                  { icon: 'public', label: 'FACEBOOK', href: 'https://www.facebook.com/kazi.osman.191808' },
+                  { icon: 'photo_camera', label: 'INSTAGRAM', href: 'https://www.instagram.com/kazi__osman' },
                 ].map((node) => (
                   <a 
                     key={node.label}

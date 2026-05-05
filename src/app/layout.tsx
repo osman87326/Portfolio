@@ -18,7 +18,7 @@ const bebasNeue = Bebas_Neue({
 export const metadata: Metadata = {
   title: "KAZI MD OSMAN GONI | Fullstack Developer Portfolio",
   description: "Portfolio of Kazi Md Osman Goni, a Fullstack Developer specializing in React, Next.js, and high-performance web architectures. Explore my projects and programming journey.",
-  keywords: ["Fullstack Developer", "React Developer", "Next.js Portfolio", "Kazi Md Osman Goni", "Software Engineer", "RUET"],
+  keywords: ["Fullstack Developer", "React Developer", "Next.js Portfolio", "Kazi Md Osman Goni", "Software Engineer"],
 };
 
 export default function RootLayout({

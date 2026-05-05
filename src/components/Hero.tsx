@@ -75,7 +75,7 @@ const Hero = () => {
             
             <h1 ref={titleRef} className="font-bebas text-[15vw] lg:text-[9rem] leading-[0.85] text-white mb-8 tracking-tighter uppercase">
               I AM<br />
-              <span className="text-primary-container drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">OSMAN GONI</span>
+              <span className="text-primary-container drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">KAZI_MD_OSMAN_GONI</span>
             </h1>
 
             <motion.div

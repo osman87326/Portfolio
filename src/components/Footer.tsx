@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="space-y-6 text-center md:text-left">
             <h2 className="font-bebas text-5xl text-white tracking-widest uppercase">KAZI_MD_OSMAN_GONI</h2>
             <p className="text-on-surface-variant font-bold tracking-[0.4em] uppercase text-[10px]">
-              FULLSTACK_DEVELOPER // RUET ENGINEER
+              FULLSTACK_DEVELOPER
             </p>
           </div>
 
@@ -41,7 +41,7 @@ const Footer = () => {
 
         <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-[10px] font-bold text-white/20 tracking-[0.3em] uppercase">
-            © 2024 OSMAN GONI. ALL SYSTEM RIGHTS RESERVED.
+            © 2024 KAZI MD OSMAN GONI. ALL SYSTEM RIGHTS RESERVED.
           </div>
           <div className="flex gap-8 text-[10px] font-bold text-white/20 tracking-[0.3em] uppercase">
             <span className="hover:text-primary-container cursor-pointer transition-colors">PRIVACY_PROTOCOL</span>

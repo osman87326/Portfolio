@@ -16,21 +16,21 @@ const Header = () => {
 
   return (
     <>
-      <motion.header 
+      <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "circOut" }}
         className="fixed top-0 w-full z-[100] bg-black/60 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-8 h-20"
       >
         <a href="/" className="text-2xl font-bebas text-white tracking-widest uppercase hover:text-primary-container transition-colors">
-          KAZI_OSMAN_GONI
+          KAZI_MD_OSMAN_GONI
         </a>
-        
+
         <nav className="hidden lg:flex items-center gap-10 font-inter font-bold tracking-widest uppercase text-[10px]">
           {menuItems.map((item) => (
-            <a 
+            <a
               key={item.name}
-              className="text-white/60 hover:text-primary-container transition-all duration-300 relative group" 
+              className="text-white/60 hover:text-primary-container transition-all duration-300 relative group"
               href={item.href}
             >
               {item.name}
@@ -40,7 +40,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <motion.button 
+          <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="hidden sm:block bg-primary-container text-black px-6 py-2 font-bebas text-lg neo-border neo-shadow transition-all"
@@ -49,19 +49,19 @@ const Header = () => {
           </motion.button>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden w-12 h-12 flex flex-col items-center justify-center gap-1.5 z-[101]"
           >
-            <motion.span 
+            <motion.span
               animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
               className="w-8 h-0.5 bg-white block"
             />
-            <motion.span 
+            <motion.span
               animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
               className="w-8 h-0.5 bg-white block"
             />
-            <motion.span 
+            <motion.span
               animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
               className="w-8 h-0.5 bg-white block"
             />
