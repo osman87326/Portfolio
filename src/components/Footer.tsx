@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="space-y-6 text-center md:text-left">
             <h2 className="font-bebas text-5xl text-white tracking-widest uppercase">KAZI_MD_OSMAN_GONI</h2>
             <p className="text-on-surface-variant font-bold tracking-[0.4em] uppercase text-[10px]">
-              Fullstack Architect // RUET Engineer
+              FULLSTACK_DEVELOPER // RUET ENGINEER
             </p>
           </div>
 
