@@ -45,7 +45,7 @@ const MagneticButton = ({ children, className }: { children: React.ReactNode, cl
 
 const Contact = () => {
   return (
-    <section id="contact" className="px-6 lg:px-12 py-32 bg-surface relative overflow-hidden">
+    <section id="contact" className="px-6 lg:pl-32 lg:pr-12 py-32 bg-surface relative overflow-hidden">
       <div className="absolute top-0 right-0 w-full h-full blueprint-bg opacity-5 pointer-events-none" />
       
       <motion.div 
@@ -62,7 +62,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
           <div className="space-y-12">
             <div className="space-y-4">
-              <h2 className="font-bebas text-8xl lg:text-9xl text-white tracking-tighter uppercase leading-none">
+              <h2 className="font-bebas text-[clamp(4rem,15vw,9rem)] text-white tracking-tighter uppercase leading-none">
                 GET_IN<br />
                 <span className="text-primary-container">TOUCH_</span>
               </h2>
@@ -94,7 +94,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="space-y-8 bg-black/40 p-10 neo-border border-white/5 backdrop-blur-md">
+          <form className="space-y-8 bg-black/40 p-6 lg:p-10 neo-border border-white/5 backdrop-blur-md">
             <div className="space-y-6">
               <div className="space-y-2">
                 <label className="font-bebas text-xl text-primary-container tracking-widest uppercase">IDENTIFIER_</label>

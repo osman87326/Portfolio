@@ -79,13 +79,13 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" ref={containerRef} className="px-6 lg:px-12 py-32 bg-surface relative overflow-hidden">
+    <section id="projects" ref={containerRef} className="px-6 lg:pl-32 lg:pr-12 py-32 bg-surface relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full blueprint-bg opacity-5 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
           <div className="space-y-4">
-            <h2 className="font-bebas text-8xl lg:text-9xl text-white tracking-tighter uppercase leading-none">
+            <h2 className="font-bebas text-[clamp(4rem,15vw,9rem)] text-white tracking-tighter uppercase leading-none">
               SELECTED<br />
               <span className="text-primary-container">WORKS_</span>
             </h2>

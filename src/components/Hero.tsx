@@ -47,7 +47,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="min-h-screen flex flex-col justify-center px-6 lg:px-12 py-20 relative overflow-hidden bg-surface">
+    <section ref={containerRef} className="min-h-screen flex flex-col justify-center px-6 lg:pl-32 lg:pr-12 py-20 relative overflow-hidden bg-surface">
       {/* Parallax Grid Background */}
       <div ref={gridRef} className="absolute inset-0 blueprint-bg opacity-20 -z-10" />
 
@@ -73,7 +73,7 @@ const Hero = () => {
               <span className="text-xs font-bold tracking-[0.2em] text-on-surface-variant uppercase">AVAILABLE FOR NEW PROJECTS</span>
             </motion.div>
 
-            <h1 ref={titleRef} className="font-bebas text-[15vw] lg:text-[9rem] leading-[0.85] text-white mb-8 tracking-tighter uppercase">
+            <h1 ref={titleRef} className="font-bebas text-[clamp(4rem,15vw,9rem)] lg:text-[9rem] leading-[0.85] text-white mb-8 tracking-tighter uppercase">
               I AM<br />
               <span className="text-primary-container drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">KAZI MD OSMAN GONI</span>
             </h1>

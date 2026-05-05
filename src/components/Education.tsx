@@ -27,7 +27,7 @@ const TimelineItem = ({ year, title, subtitle, description, icon }: { year: stri
 
 const Education = () => {
   return (
-    <section id="education" className="px-6 lg:px-12 py-32 bg-black relative overflow-hidden">
+    <section id="education" className="px-6 lg:pl-32 lg:pr-12 py-32 bg-black relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full blueprint-bg opacity-5 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto">

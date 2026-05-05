@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" className="px-6 lg:px-12 py-32 bg-surface-container-lowest relative overflow-hidden">
+    <section id="about" className="px-6 lg:pl-32 lg:pr-12 py-32 bg-surface-container-lowest relative overflow-hidden">
       <div className="absolute top-0 right-0 w-full h-full blueprint-bg opacity-10 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -13,7 +13,7 @@ const About = () => {
           
           <div className="lg:col-span-7 space-y-12">
             <div className="space-y-4">
-              <h2 className="font-bebas text-8xl lg:text-9xl text-white tracking-tighter uppercase leading-none">
+              <h2 className="font-bebas text-[clamp(4rem,15vw,9rem)] text-white tracking-tighter uppercase leading-none">
                 WHO_IS<br />
                 <span className="text-primary-container">KAZI MD OSMAN GONI?</span>
               </h2>

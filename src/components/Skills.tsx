@@ -35,10 +35,10 @@ const SkillCard = ({ title, skills }: { title: string, skills: { name: string, l
 
 const Skills = () => {
   return (
-    <section id="skills" className="px-6 lg:px-12 py-32 blueprint-bg relative">
+    <section id="skills" className="px-6 lg:pl-32 lg:pr-12 py-32 blueprint-bg relative">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col items-center mb-20 text-center">
-          <h2 className="font-bebas text-8xl lg:text-[10rem] text-white leading-none tracking-tighter uppercase mb-4">
+          <h2 className="font-bebas text-[clamp(4rem,15vw,10rem)] text-white leading-none tracking-tighter uppercase mb-4">
             TECH_STACK
           </h2>
           <p className="text-on-surface-variant font-bold tracking-[0.4em] uppercase text-xs">
