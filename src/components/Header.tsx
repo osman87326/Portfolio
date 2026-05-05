@@ -23,7 +23,7 @@ const Header = () => {
         className="fixed top-0 w-full z-[100] bg-black/60 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-8 h-20"
       >
         <a href="/" className="text-2xl font-bebas text-white tracking-widest uppercase hover:text-primary-container transition-colors">
-          KAZI_MD_OSMAN_GONI
+          KAZI MD OSMAN GONI
         </a>
 
         <nav className="hidden lg:flex items-center gap-10 font-inter font-bold tracking-widest uppercase text-[10px]">

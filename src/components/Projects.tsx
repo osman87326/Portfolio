@@ -72,14 +72,7 @@ const Projects = () => {
         });
       });
 
-      // Floating animation for featured
-      gsap.to('.featured-project', {
-        y: -20,
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut'
-      });
+      // No featured project animation needed
     }, containerRef);
 
     return () => ctx.revert();

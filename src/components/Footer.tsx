@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-12">
           <div className="space-y-6 text-center md:text-left">
-            <h2 className="font-bebas text-5xl text-white tracking-widest uppercase">KAZI_MD_OSMAN_GONI</h2>
+            <h2 className="font-bebas text-5xl text-white tracking-widest uppercase">KAZI MD OSMAN GONI</h2>
             <p className="text-on-surface-variant font-bold tracking-[0.4em] uppercase text-[10px]">
               FULLSTACK_DEVELOPER
             </p>
