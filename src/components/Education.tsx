@@ -78,7 +78,7 @@ const Education = () => {
               <TimelineItem 
                 year="JUL 2023 - SEP 2023"
                 icon="work"
-                title="Sales Executive"
+                title="Digital Marketing Executive"
                 subtitle="Gadget Dreamland, Basabo Dhaka"
                 description="Honed communication and problem-solving skills in a fast-paced retail environment. Developed a customer-centric approach to problem-solving and teamwork."
               />
