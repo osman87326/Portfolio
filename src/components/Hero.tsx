@@ -75,7 +75,7 @@ const Hero = () => {
 
             <h1 ref={titleRef} className="font-bebas text-[15vw] lg:text-[9rem] leading-[0.85] text-white mb-8 tracking-tighter uppercase">
               I AM<br />
-              <span className="text-primary-container drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">OSMAN GONI</span>
+              <span className="text-primary-container drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">KAZI MD OSMAN GONI</span>
             </h1>
 
             <motion.div
@@ -140,16 +140,8 @@ const Hero = () => {
                 <img
                   src="/1.jpeg"
                   alt="Kazi Md Osman Goni"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 ease-out"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
-
-                {/* Floating Tags */}
-                <div className="absolute bottom-6 left-6 right-6 flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-black/80 backdrop-blur-md text-[10px] font-bold text-primary-container neo-border border-[1px] uppercase tracking-tighter">REACT_NODE</span>
-                  <span className="px-3 py-1 bg-black/80 backdrop-blur-md text-[10px] font-bold text-white neo-border border-[1px] uppercase tracking-tighter">NEXT_JS_V15</span>
-                  <span className="px-3 py-1 bg-black/80 backdrop-blur-md text-[10px] font-bold text-tertiary-container neo-border border-[1px] uppercase tracking-tighter">TS_STRICT</span>
-                </div>
               </div>
             </motion.div>
           </div>

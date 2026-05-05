@@ -15,7 +15,7 @@ const About = () => {
             <div className="space-y-4">
               <h2 className="font-bebas text-8xl lg:text-9xl text-white tracking-tighter uppercase leading-none">
                 WHO_IS<br />
-                <span className="text-primary-container">KAZI_MD_OSMAN_GONI?</span>
+                <span className="text-primary-container">KAZI MD OSMAN GONI?</span>
               </h2>
               <div className="w-24 h-2 bg-primary-container" />
             </div>

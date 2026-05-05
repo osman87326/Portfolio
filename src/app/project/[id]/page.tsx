@@ -2,9 +2,12 @@ import { projects } from '@/data/projects';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Sidebar from '@/components/Sidebar';
+import { motion } from 'framer-motion';
+import { Project } from '@/data/projects';
 
 export async function generateStaticParams() {
-  return projects.map((project) => ({
+  return projects.map((project: Project) => ({
     id: project.id,
   }));
 }
@@ -14,7 +17,7 @@ export default function ProjectDetail({
 }: {
   params: { id: string };
 }) {
-  const project = projects.find((p) => p.id === params.id);
+  const project = projects.find((p: Project) => p.id === params.id);
 
   if (!project) {
     return notFound();
@@ -75,7 +78,7 @@ export default function ProjectDetail({
                 <div className="space-y-6">
                   <h3 className="font-bebas text-3xl text-white uppercase border-b border-white/10 pb-2">TECH_STACK</h3>
                   <div className="flex flex-wrap gap-3">
-                    {project.techStack.map((tech, i) => (
+                    {project.techStack.map((tech: string, i: number) => (
                       <span
                         key={i}
                         className="px-4 py-2 bg-surface-container neo-border text-sm font-bold text-on-surface-variant"
