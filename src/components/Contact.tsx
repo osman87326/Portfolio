@@ -45,80 +45,90 @@ const MagneticButton = ({ children, className }: { children: React.ReactNode, cl
 
 const Contact = () => {
   return (
-    <section className="px-8 py-section-padding blueprint-bg">
+    <section id="contact" className="px-6 lg:px-12 py-32 bg-surface relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-full h-full blueprint-bg opacity-5 pointer-events-none" />
+      
       <motion.div 
-        initial={{ filter: "blur(20px)", opacity: 0 }}
-        whileInView={{ filter: "blur(0px)", opacity: 1 }}
-        transition={{ duration: 1.2 }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="max-w-5xl mx-auto bg-surface neo-border neo-shadow-primary p-12 relative"
+        className="max-w-6xl mx-auto bg-surface-container-high neo-border neo-shadow-primary p-8 lg:p-20 relative overflow-hidden"
       >
-        <div className="absolute -top-10 -right-5 bg-tertiary-container text-black px-6 py-2 font-bebas text-3xl neo-border transform rotate-3">
-          INCOMING_SIGNAL
+        <div className="absolute -top-10 -right-5 bg-primary-container text-black px-8 py-3 font-bebas text-4xl neo-border transform rotate-6 z-20">
+          ESTABLISH_LINK
         </div>
-        <h2 className="font-bebas text-8xl text-white mb-12">CONNECT_</h2>
-        <form className="space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-2">
-              <label className="font-bebas text-xl text-primary-container">IDENTIFIER_</label>
-              <motion.input 
-                whileFocus={{ scale: 1.01, borderColor: "#38bdf8" }}
-                className="w-full bg-black border-2 border-zinc-800 text-white p-4 outline-none transition-all neo-shadow" 
-                placeholder="WHO ARE YOU?" 
-                type="text" 
-              />
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
+          <div className="space-y-12">
+            <div className="space-y-4">
+              <h2 className="font-bebas text-8xl lg:text-9xl text-white tracking-tighter uppercase leading-none">
+                GET_IN<br />
+                <span className="text-primary-container">TOUCH_</span>
+              </h2>
+              <p className="text-on-surface-variant text-xl leading-relaxed font-inter max-w-sm">
+                Ready to architect the next radical digital experience? Send a signal into the void.
+              </p>
             </div>
-            <div className="space-y-2">
-              <label className="font-bebas text-xl text-primary-container">COORDINATES_</label>
-              <motion.input 
-                whileFocus={{ scale: 1.01, borderColor: "#38bdf8" }}
-                className="w-full bg-black border-2 border-zinc-800 text-white p-4 outline-none transition-all neo-shadow" 
-                placeholder="EMAIL@VOID.COM" 
-                type="email" 
-              />
-            </div>
-          </div>
-          <div className="space-y-2">
-            <label className="font-bebas text-xl text-primary-container">MESSAGE_</label>
-            <motion.textarea 
-              whileFocus={{ scale: 1.01, borderColor: "#38bdf8" }}
-              className="w-full bg-black border-2 border-zinc-800 text-white p-4 outline-none transition-all neo-shadow" 
-              placeholder="STATE YOUR PURPOSE" 
-              rows={4} 
-            ></motion.textarea>
-          </div>
-          <MagneticButton className="w-full bg-primary-container text-black p-6 font-bebas text-4xl neo-border hover:bg-white transition-colors">
-            BROADCAST_MESSAGE
-          </MagneticButton>
-        </form>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-16 pt-16 border-t-2 border-zinc-800">
-          <div className="flex items-center gap-6 group">
-            <div className="p-4 bg-surface-container neo-border neo-shadow group-hover:bg-primary-container group-hover:text-black transition-all">
-              <span className="material-symbols-outlined text-4xl">mail</span>
-            </div>
-            <div>
-              <div className="font-bebas text-xl text-primary-container">EMAIL_NODE</div>
-              <div className="text-white font-bold">kaziosman873@gmail.com</div>
+
+            <div className="space-y-8">
+              {[
+                { icon: 'mail', label: 'EMAIL_NODE', value: 'kaziosman873@gmail.com', href: 'mailto:kaziosman873@gmail.com' },
+                { icon: 'call', label: 'VOICE_CHANNEL', value: '01871-211687', href: 'tel:01871211687' },
+                { icon: 'chat', label: 'WHATSAPP_LINK', value: '01871-211687', href: 'https://wa.me/8801871211687' },
+              ].map((item) => (
+                <a 
+                  key={item.label}
+                  href={item.href}
+                  className="flex items-center gap-6 group hover:translate-x-2 transition-transform"
+                >
+                  <div className="w-16 h-16 bg-surface neo-border flex items-center justify-center group-hover:bg-primary-container group-hover:text-black transition-all">
+                    <span className="material-symbols-outlined text-3xl">{item.icon}</span>
+                  </div>
+                  <div>
+                    <div className="font-bebas text-xl text-primary-container tracking-widest">{item.label}</div>
+                    <div className="text-white font-bold text-lg">{item.value}</div>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
-          <div className="flex items-center gap-6 group">
-            <div className="p-4 bg-surface-container neo-border neo-shadow group-hover:bg-primary-container group-hover:text-black transition-all">
-              <span className="material-symbols-outlined text-4xl">call</span>
+
+          <form className="space-y-8 bg-black/40 p-10 neo-border border-white/5 backdrop-blur-md">
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <label className="font-bebas text-xl text-primary-container tracking-widest uppercase">IDENTIFIER_</label>
+                <input 
+                  className="w-full bg-black/60 border-2 border-white/10 text-white p-5 outline-none focus:border-primary-container transition-all neo-shadow text-lg" 
+                  placeholder="WHO ARE YOU?" 
+                  type="text" 
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="font-bebas text-xl text-primary-container tracking-widest uppercase">COORDINATES_</label>
+                <input 
+                  className="w-full bg-black/60 border-2 border-white/10 text-white p-5 outline-none focus:border-primary-container transition-all neo-shadow text-lg" 
+                  placeholder="EMAIL@VOID.COM" 
+                  type="email" 
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="font-bebas text-xl text-primary-container tracking-widest uppercase">MESSAGE_</label>
+                <textarea 
+                  className="w-full bg-black/60 border-2 border-white/10 text-white p-5 outline-none focus:border-primary-container transition-all neo-shadow text-lg resize-none" 
+                  placeholder="STATE YOUR PURPOSE" 
+                  rows={4} 
+                ></textarea>
+              </div>
             </div>
-            <div>
-              <div className="font-bebas text-xl text-primary-container">VOICE_CHANNEL</div>
-              <div className="text-white font-bold">+880 1871-211687</div>
-            </div>
-          </div>
-          <div className="flex items-center gap-6 group">
-            <div className="p-4 bg-surface-container neo-border neo-shadow group-hover:bg-primary-container group-hover:text-black transition-all">
-              <span className="material-symbols-outlined text-4xl">chat</span>
-            </div>
-            <div>
-              <div className="font-bebas text-xl text-primary-container">WHATSAPP_LINK</div>
-              <div className="text-white font-bold">+880 1871-211687</div>
-            </div>
-          </div>
+            
+            <MagneticButton className="w-full bg-primary-container text-black p-6 font-bebas text-4xl neo-border hover:bg-white transition-colors relative overflow-hidden group">
+              <span className="relative z-10 flex items-center justify-center gap-4">
+                BROADCAST_SIGNAL
+                <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">send</span>
+              </span>
+            </MagneticButton>
+          </form>
         </div>
       </motion.div>
     </section>

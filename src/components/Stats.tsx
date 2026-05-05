@@ -42,11 +42,12 @@ const StatCard = ({ value, label }: { value: string, label: string }) => {
 
 const Stats = () => {
   return (
-    <section className="py-section-padding px-8 bg-black">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
-        <StatCard value="120+" label="DEVOPS_FLIPS" />
-        <StatCard value="08" label="CORE_PROTOCOLS" />
-        <StatCard value="99.9" label="UPTIME_RELAY" />
+    <section className="py-32 px-6 lg:px-12 bg-black relative overflow-hidden">
+      <div className="absolute inset-0 blueprint-bg opacity-5 pointer-events-none" />
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <StatCard value="25+" label="PROJECTS_BUILT" />
+        <StatCard value="02+" label="YEARS_EXPERIENCE" />
+        <StatCard value="1151" label="CF_RATING" />
       </div>
     </section>
   );

@@ -96,13 +96,28 @@
   .neo-shadow-primary {
     box-shadow: 8px 8px 0px 0px #38bdf8;
   }
+  .neo-shadow-hover {
+    box-shadow: 12px 12px 0px 0px #38bdf8;
+  }
   .neo-border {
     border: 4px solid #000000;
   }
   .blueprint-bg {
-    background-image: radial-gradient(#3e484f 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-image: radial-gradient(#3e484f 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
   }
+  .glass {
+    background: rgba(15, 20, 24, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .text-glow {
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 :root {

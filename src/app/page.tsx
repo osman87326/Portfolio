@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Header />
       <Sidebar />
-      <main className="lg:ml-20 pt-16">
+      <main className="lg:ml-20 pt-20">
         <Hero />
         <About />
         <Skills />
