@@ -14,6 +14,33 @@ const Header = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsOpen(false);
+    
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      const lenis = (window as any).lenis;
+      if (lenis) {
+        lenis.scrollTo(element, { offset: -80 });
+      } else {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+      // Update URL hash
+      window.history.pushState(null, '', href);
+    } else {
+      window.location.href = '/' + href;
+    }
+  };
+
   return (
     <>
       <motion.header
@@ -30,8 +57,9 @@ const Header = () => {
           {menuItems.map((item) => (
             <a
               key={item.name}
-              className="text-white/60 hover:text-primary-container transition-all duration-300 relative group"
+              className="text-white/60 hover:text-primary-container transition-all duration-300 relative group cursor-pointer"
               href={item.href}
+              onClick={(e) => handleScroll(e, item.href)}
             >
               {item.name}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary-container transition-all group-hover:w-full" />
@@ -87,8 +115,8 @@ const Header = () => {
                 transition={{ delay: i * 0.1 }}
                 key={item.name}
                 href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="font-bebas text-6xl text-white hover:text-primary-container transition-colors"
+                onClick={(e) => handleScroll(e, item.href)}
+                className="font-bebas text-6xl text-white hover:text-primary-container transition-colors cursor-pointer"
               >
                 {item.name}
               </motion.a>

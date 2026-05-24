@@ -17,7 +17,7 @@ const Hero = () => {
     if (!titleRef.current) return;
 
     // Split text for animation
-    const text = new SplitType(titleRef.current, { types: 'chars' });
+    const text = new SplitType(titleRef.current, { types: 'words,chars' });
 
     const ctx = gsap.context(() => {
       // Entry animation

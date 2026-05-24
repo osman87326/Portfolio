@@ -136,3 +136,9 @@ body {
   font-family: var(--font-inter);
 }
 
+/* Prevent word breaking from SplitType inside the Hero header */
+.word {
+  display: inline-block !important;
+  white-space: nowrap;
+}
+
