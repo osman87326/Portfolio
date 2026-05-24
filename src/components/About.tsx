@@ -9,9 +9,9 @@ const About = () => {
       <div className="absolute top-0 right-0 w-full h-full blueprint-bg opacity-10 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-16 items-start">
           
-          <div className="lg:col-span-7 space-y-12">
+          <div className="xl:col-span-7 space-y-12">
             <div className="space-y-4">
               <h2 className="font-bebas text-[clamp(3rem,8vw,6rem)] text-white tracking-tighter uppercase leading-none">
                 WHO_IS<br />
@@ -62,8 +62,8 @@ const About = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-5 space-y-8 w-full">
-            <div className="p-10 bg-surface-container neo-border neo-shadow-primary relative overflow-hidden group">
+          <div className="xl:col-span-5 space-y-8 w-full">
+            <div className="p-6 lg:p-8 xl:p-10 bg-surface-container neo-border neo-shadow-primary relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
                 <span className="material-symbols-outlined text-6xl text-primary-container">terminal</span>
               </div>
@@ -77,15 +77,15 @@ const About = () => {
                 ].map((spec, i) => (
                   <li key={i} className="flex flex-col gap-1">
                     <span className="text-[10px] font-bold text-white/40 uppercase tracking-[0.2em]">{spec.label}</span>
-                    <span className="text-lg font-bold text-white">{spec.value}</span>
+                    <span className="text-base lg:text-lg font-bold text-white">{spec.value}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="p-10 bg-primary-container text-black neo-border neo-shadow relative overflow-hidden group">
+            <div className="p-6 lg:p-8 xl:p-10 bg-primary-container text-black neo-border neo-shadow relative overflow-hidden group">
               <h3 className="font-bebas text-4xl mb-8 border-b border-black/20 pb-4 uppercase">CONNECT_NODES</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {[
                   { icon: 'code', label: 'GITHUB', href: 'https://github.com/osman87326' },
                   { icon: 'work', label: 'LINKEDIN', href: 'https://www.linkedin.com/in/kazimdosmangoni/' },
@@ -95,10 +95,10 @@ const About = () => {
                   <a 
                     key={node.label}
                     href={node.href} 
-                    className="flex items-center gap-3 p-3 bg-black/5 hover:bg-black/10 transition-colors border border-black/10 rounded-lg group/link"
+                    className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-black/5 hover:bg-black/10 transition-colors border border-black/10 rounded-lg group/link"
                   >
-                    <span className="material-symbols-outlined text-3xl group-hover/link:scale-110 transition-transform">{node.icon}</span>
-                    <span className="font-bebas text-xl">{node.label}</span>
+                    <span className="material-symbols-outlined text-2xl sm:text-3xl group-hover/link:scale-110 transition-transform">{node.icon}</span>
+                    <span className="font-bebas text-lg sm:text-xl">{node.label}</span>
                   </a>
                 ))}
               </div>
