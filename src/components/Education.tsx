@@ -34,7 +34,7 @@ const Education = () => {
         <div className="flex flex-col lg:flex-row gap-24">
           <div className="flex-1">
             <div className="mb-20">
-              <h2 className="font-bebas text-8xl text-white tracking-tighter uppercase mb-4">
+              <h2 className="font-bebas text-[clamp(2.2rem,4.5vw,4.5rem)] text-white tracking-tighter uppercase mb-4">
                 ACADEMIC_LOGS
               </h2>
               <p className="text-primary-container font-bold tracking-[0.4em] uppercase text-xs">
@@ -66,7 +66,7 @@ const Education = () => {
 
           <div className="flex-1">
             <div className="mb-20">
-              <h2 className="font-bebas text-8xl text-white tracking-tighter uppercase mb-4">
+              <h2 className="font-bebas text-[clamp(2.2rem,4.5vw,4.5rem)] text-white tracking-tighter uppercase mb-4">
                 PROFESSIONAL_LOGS
               </h2>
               <p className="text-tertiary-container font-bold tracking-[0.4em] uppercase text-xs">

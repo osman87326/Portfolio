@@ -13,9 +13,9 @@ const About = () => {
           
           <div className="lg:col-span-7 space-y-12">
             <div className="space-y-4">
-              <h2 className="font-bebas text-[clamp(4rem,15vw,9rem)] text-white tracking-tighter uppercase leading-none">
+              <h2 className="font-bebas text-[clamp(3rem,8vw,6rem)] text-white tracking-tighter uppercase leading-none">
                 WHO_IS<br />
-                <span className="text-primary-container">KAZI MD OSMAN GONI?</span>
+                <span className="text-[clamp(2.2rem,5vw,4.2rem)] text-primary-container block mt-2">KAZI MD OSMAN GONI?</span>
               </h2>
               <div className="w-24 h-2 bg-primary-container" />
             </div>
