@@ -107,7 +107,7 @@ const Header = () => {
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed inset-0 z-[90] bg-black flex flex-col items-center justify-center gap-8 lg:hidden"
           >
-            <div className="absolute inset-0 blueprint-bg opacity-20" />
+            <div className="absolute inset-0 blueprint-bg opacity-20 pointer-events-none z-0" />
             {menuItems.map((item, i) => (
               <motion.a
                 initial={{ opacity: 0, y: 20 }}
@@ -116,7 +116,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleScroll(e, item.href)}
-                className="font-bebas text-6xl text-white hover:text-primary-container transition-colors cursor-pointer"
+                className="font-bebas text-6xl text-white hover:text-primary-container transition-colors cursor-pointer relative z-10"
               >
                 {item.name}
               </motion.a>
