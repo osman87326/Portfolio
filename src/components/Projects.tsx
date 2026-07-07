@@ -163,14 +163,17 @@ const Projects = () => {
         </div>
 
         <div className="mt-20 flex justify-center">
-          <motion.button
+          <motion.a
+            href="https://github.com/osman87326"
+            target="_blank"
+            rel="noreferrer"
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-4 text-white font-bebas text-3xl group"
           >
             <span className="w-12 h-[2px] bg-primary-container group-hover:w-20 transition-all" />
             EXPLORE_ALL_REPOSITORIES
             <span className="material-symbols-outlined text-primary-container group-hover:translate-x-2 transition-transform">arrow_forward</span>
-          </motion.button>
+          </motion.a>
         </div>
       </div>
     </section>
