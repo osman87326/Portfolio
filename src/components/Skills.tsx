@@ -46,7 +46,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <SkillCard 
             title="COMPETITIVE_PRO" 
             skills={[
@@ -63,15 +63,6 @@ const Skills = () => {
               { name: "Workflow Prioritisation", level: 95 },
               { name: "Adaptability", level: 90 },
               { name: "Team Collaboration", level: 95 }
-            ]} 
-          />
-          <SkillCard 
-            title="LANGUAGES" 
-            skills={[
-              { name: "Bengali (Native)", level: 100 },
-              { name: "English (Fluent)", level: 90 },
-              { name: "Arabic (Basic)", level: 40 },
-              { name: "C++ / JS / TS", level: 95 }
             ]} 
           />
         </div>
