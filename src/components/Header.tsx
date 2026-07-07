@@ -68,13 +68,15 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <motion.button
+          <motion.a
+            href="/resume.pdf"
+            download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="hidden sm:block bg-primary-container text-black px-6 py-2 font-bebas text-lg neo-border neo-shadow transition-all"
           >
             HIRE_ME
-          </motion.button>
+          </motion.a>
 
           {/* Mobile Menu Toggle */}
           <button
