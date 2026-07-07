@@ -3,7 +3,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useSpring, useMotionValue, useTransform } from 'framer-motion';
 
-const MagneticButton = ({ children, className }: { children: React.ReactNode, className: string }) => {
+const MagneticButton = ({ children, className, type = 'button' }: { children: React.ReactNode, className: string, type?: 'button' | 'submit' | 'reset' }) => {
   const ref = useRef<HTMLButtonElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -33,6 +33,7 @@ const MagneticButton = ({ children, className }: { children: React.ReactNode, cl
   return (
     <motion.button
       ref={ref}
+      type={type}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ x: springX, y: springY }}
@@ -44,6 +45,22 @@ const MagneticButton = ({ children, className }: { children: React.ReactNode, cl
 };
 
 const Contact = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const message = `Hello Osman, I’m ${formData.name || 'a visitor'} (${formData.email || 'no email provided'}).\n\n${formData.message || 'I would like to connect.'}`;
+    const telegramUrl = `https://t.me/osman_ECE?text=${encodeURIComponent(message)}`;
+
+    window.open(telegramUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="contact" className="px-6 lg:pl-32 lg:pr-12 py-32 bg-surface relative overflow-hidden">
       <div className="absolute top-0 right-0 w-full h-full blueprint-bg opacity-5 pointer-events-none" />
@@ -76,6 +93,7 @@ const Contact = () => {
                 { icon: 'mail', label: 'EMAIL_NODE', value: 'kaziosman873@gmail.com', href: 'mailto:kaziosman873@gmail.com' },
                 { icon: 'call', label: 'VOICE_CHANNEL', value: '01871-211687', href: 'tel:01871211687' },
                 { icon: 'chat', label: 'WHATSAPP_LINK', value: '01871-211687', href: 'https://wa.me/8801871211687' },
+                { icon: 'send', label: 'TELEGRAM', value: '@osman_ECE', href: 'https://t.me/osman_ECE' },
               ].map((item) => (
                 <a 
                   key={item.label}
@@ -94,14 +112,17 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="space-y-8 bg-black/40 p-6 lg:p-10 neo-border border-white/5 backdrop-blur-md">
+          <form onSubmit={handleSubmit} className="space-y-8 bg-black/40 p-6 lg:p-10 neo-border border-white/5 backdrop-blur-md">
             <div className="space-y-6">
               <div className="space-y-2">
                 <label className="font-bebas text-xl text-primary-container tracking-widest uppercase">IDENTIFIER_</label>
                 <input 
                   className="w-full bg-black/60 border-2 border-white/10 text-white p-5 outline-none focus:border-primary-container transition-all neo-shadow text-lg" 
                   placeholder="WHO ARE YOU?" 
-                  type="text" 
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                 />
               </div>
               <div className="space-y-2">
@@ -109,7 +130,10 @@ const Contact = () => {
                 <input 
                   className="w-full bg-black/60 border-2 border-white/10 text-white p-5 outline-none focus:border-primary-container transition-all neo-shadow text-lg" 
                   placeholder="EMAIL@VOID.COM" 
-                  type="email" 
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                 />
               </div>
               <div className="space-y-2">
@@ -117,12 +141,15 @@ const Contact = () => {
                 <textarea 
                   className="w-full bg-black/60 border-2 border-white/10 text-white p-5 outline-none focus:border-primary-container transition-all neo-shadow text-lg resize-none" 
                   placeholder="STATE YOUR PURPOSE" 
-                  rows={4} 
+                  rows={4}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                 ></textarea>
               </div>
             </div>
             
-            <MagneticButton className="w-full bg-primary-container text-black p-6 font-bebas text-4xl neo-border hover:bg-white transition-colors relative overflow-hidden group">
+            <MagneticButton type="submit" className="w-full bg-primary-container text-black p-6 font-bebas text-4xl neo-border hover:bg-white transition-colors relative overflow-hidden group">
               <span className="relative z-10 flex items-center justify-center gap-4">
                 BROADCAST_SIGNAL
                 <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">send</span>

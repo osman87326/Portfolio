@@ -24,6 +24,9 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-4">
+            <a href="https://t.me/osman_ECE" target="_blank" rel="noreferrer" className="w-12 h-12 bg-surface-container neo-border flex items-center justify-center hover:bg-primary-container hover:text-black transition-all">
+              <span className="material-symbols-outlined">send</span>
+            </a>
             <a href="https://github.com/osman87326" target="_blank" className="w-12 h-12 bg-surface-container neo-border flex items-center justify-center hover:bg-primary-container hover:text-black transition-all">
               <span className="material-symbols-outlined">code</span>
             </a>
